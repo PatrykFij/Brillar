@@ -1,14 +1,12 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import * as React from "react";
+import Layout from "../components/layout";
+import Products from "../components/Products";
 
 const IndexPage = () => (
-  <Layout>
-    <h1>Hello world</h1>
-  </Layout>
-)
+    <Layout>
+        <h1>Hello world</h1>
+        <Products />
+    </Layout>
+);
 
-export default IndexPage
+export default IndexPage;
