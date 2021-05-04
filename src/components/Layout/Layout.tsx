@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "../Header/Header";
 import "./layout.css";
@@ -42,10 +41,6 @@ const Layout: FC<ILayout> = ({ children }) => {
             </div>
         </>
     );
-};
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default Layout;
