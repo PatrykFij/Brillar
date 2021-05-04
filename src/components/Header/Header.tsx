@@ -1,9 +1,12 @@
-import * as React from "react";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
 import { Link } from "gatsby";
-import { HeaderWrapper } from "./header.css";
+import { HeaderWrapper } from "./Header.css";
 
-const Header = ({ siteTitle }) => (
+interface IHeader {
+    siteTitle: string;
+}
+
+const Header: FC<IHeader> = ({ siteTitle }: IHeader) => (
     <HeaderWrapper>
         <div
             style={{
@@ -26,13 +29,5 @@ const Header = ({ siteTitle }) => (
         </div>
     </HeaderWrapper>
 );
-
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-    siteTitle: ``,
-};
 
 export default Header;

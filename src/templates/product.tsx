@@ -1,8 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout/Layout";
 
-const ProductTemplate = ({ pageContext }) => {
+interface IProductTemplate {
+    pageContext: any;
+}
+
+const ProductTemplate: FC<IProductTemplate> = ({ pageContext }) => {
     const { product } = pageContext;
     return (
         <Layout>

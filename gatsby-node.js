@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
         console.log(node.handle);
         createPage({
             path: `/products/${node.handle}`,
-            component: path.resolve(`./src/templates/product.js`),
+            component: path.resolve(`./src/templates/product.tsx`),
             context: {
                 product: node,
             },
