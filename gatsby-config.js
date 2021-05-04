@@ -52,6 +52,15 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: `gatsby-source-shopify`,
+            options: {
+                // The domain name of your Shopify shop.
+                shopName: `brillar-jewelry`,
+                // The storefront access token
+                accessToken: `5b45cc441a2b3bf0d835d3084d804180`,
+            },
+        },
         `gatsby-plugin-gatsby-cloud`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
