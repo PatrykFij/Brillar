@@ -5,7 +5,7 @@ import "./index.css";
 const IndexPage: FC = () => {
     return (
         <Layout>
-            <h1>Hello world</h1>
+            <h1>Witaj w sklepie Brillar</h1>
         </Layout>
     );
 };
