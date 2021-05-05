@@ -6,7 +6,7 @@ interface IHeader {
     siteTitle: string;
 }
 
-const Header: FC<IHeader> = ({ siteTitle }: IHeader) => (
+const Header: FC<IHeader> = ({ siteTitle }) => (
     <HeaderWrapper>
         <div>
             <Typography variant="h3">
