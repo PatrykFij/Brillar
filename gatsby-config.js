@@ -62,11 +62,14 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-styled-components`,
+            resolve: `gatsby-plugin-material-ui`,
             options: {
-                // Add any options here
+                stylesProvider: {
+                    injectFirst: true,
+                },
             },
         },
+        `gatsby-plugin-styled-components`,
         {
             resolve: "gatsby-plugin-eslint",
             options: {

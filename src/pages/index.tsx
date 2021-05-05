@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import React, { FC } from "react";
 import Layout from "../components/Layout/Layout";
 import "./index.css";
@@ -5,7 +6,7 @@ import "./index.css";
 const IndexPage: FC = () => {
     return (
         <Layout>
-            <h1>Witaj w sklepie Brillar</h1>
+            <Typography variant="h5">Witaj w sklepie Brillar</Typography>
         </Layout>
     );
 };
