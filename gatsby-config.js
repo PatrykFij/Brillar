@@ -1,3 +1,5 @@
+require(`dotenv`).config();
+
 module.exports = {
     siteMetadata: {
         title: `Brillar`,
@@ -36,7 +38,7 @@ module.exports = {
                 // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
                 fieldName: "cosmetics",
                 // Url to query from
-                url: "https://api-eu-central-1.graphcms.com/v2/cko70jj73xjcl01xt84pda944/master",
+                url: process.env.GRAPH_CMS_API,
             },
         },
         {
@@ -58,7 +60,7 @@ module.exports = {
                 // The domain name of your Shopify shop.
                 shopName: `brillar-jewelry`,
                 // The storefront access token
-                accessToken: `5b45cc441a2b3bf0d835d3084d804180`,
+                accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
             },
         },
         {

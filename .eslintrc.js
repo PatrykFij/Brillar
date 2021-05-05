@@ -26,6 +26,7 @@ module.exports = {
         // Disable prop-types as we use TypeScript for type checking
         "react/prop-types": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-var-requires": "off",
         // Enable prettier rules
         "prettier/prettier": "error",
         // interface start with capital I
