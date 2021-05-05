@@ -24,8 +24,8 @@ const Layout: FC<ILayout> = ({ children }) => {
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
             <Page>
                 <main>{children}</main>
-                <Footer />
             </Page>
+            <Footer />
         </>
     );
 };
