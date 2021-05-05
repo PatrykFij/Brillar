@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { BrillarColors } from "../../constants/BrillarColors";
 
 export const HeaderWrapper = styled.header`
-    background: #f0b51d;
+    background: ${BrillarColors.COLOR_GOLD};
     margin-bottom: 1.45rem;
 
     div:first-child {
@@ -15,7 +16,7 @@ export const HeaderWrapper = styled.header`
     }
 
     & a {
-        color: white;
+        color: ${BrillarColors.COLOR_WHITE};
         text-decoration: none;
     }
 `;
