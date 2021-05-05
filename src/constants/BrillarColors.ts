@@ -1,5 +1,5 @@
 export enum BrillarColors {
-    COLOR_GOLD = "#f0b51d",
+    COLOR_GOLD = "#d9caa1",
     COLOR_WHITE = "#ffffff",
     COLOR_BACKGROUND_WHITESMOKE = "#ececec",
     COLOR_FOOTER = "#dbdbdb",
