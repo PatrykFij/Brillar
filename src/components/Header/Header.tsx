@@ -1,6 +1,9 @@
 import React, { FC } from "react";
-import { Link, Typography } from "@material-ui/core";
-import { HeaderWrapper } from "./Header.css";
+import { Typography } from "@material-ui/core";
+import { HeaderWrapper, IconsContainer } from "./Header.css";
+import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Link } from "gatsby";
 
 interface IHeader {
     siteTitle: string;
@@ -8,11 +11,17 @@ interface IHeader {
 
 const Header: FC<IHeader> = ({ siteTitle }) => (
     <HeaderWrapper>
-        <div>
-            <Typography variant="h3">
-                <Link href="/">{siteTitle}</Link>
-            </Typography>
-        </div>
+        <Typography variant="h3">
+            <Link to="/">{siteTitle}</Link>
+        </Typography>
+        <IconsContainer>
+            <Link to="/basket">
+                <ShoppingCartIcon />
+            </Link>
+            <Link to="/login">
+                <PersonOutlineIcon />
+            </Link>
+        </IconsContainer>
     </HeaderWrapper>
 );
 
