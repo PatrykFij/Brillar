@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@material-ui/core";
-import React, { FC, useEffect } from "react";
+import React, { FC, Fragment, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import ProductCard from "../components/ProductCard/ProductCard";
 import { useStaticGetAllShopifyProductsQuery } from "../graphql/AllShopifyProducts";
@@ -13,10 +13,15 @@ const IndexPage: FC = () => {
 
     return (
         <Layout>
-            <Typography variant="h5">Witaj w sklepie Brillar</Typography>
-            <Grid justify="center" spacing={2} container>
+            <Grid justify="flex-start" spacing={2} container>
                 {allShopifyProduct &&
-                    allShopifyProduct.edges.map(({ node }: any) => <ProductCard key={node.handle} product={node} />)}
+                    allShopifyProduct.edges.map(({ node }: any) => (
+                        <Fragment key={node.handle}>
+                            <ProductCard product={node} />
+                            <ProductCard product={node} />
+                            <ProductCard product={node} />
+                        </Fragment>
+                    ))}
             </Grid>
         </Layout>
     );

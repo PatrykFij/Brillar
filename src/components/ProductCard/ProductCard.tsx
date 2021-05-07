@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Button, CardActions, CardContent, Typography } from "@material-ui/core";
-import { StyledCard } from "./ProductCard.css";
+import { CardActions, CardContent, Grid, Typography } from "@material-ui/core";
+import { SoldOutFlag, StyledCard } from "./ProductCard.css";
 
 interface IProductCardProps {
     product: IProduct;
@@ -8,21 +8,34 @@ interface IProductCardProps {
 
 interface IProduct {
     title: string;
-    description: string;
+    priceRange: IPriceRange;
     images: any;
+    availableForSale: boolean;
 }
 
-const ProductCard: FC<IProductCardProps> = ({ product: { title, description, images } }) => {
+interface IPriceRange {
+    minVariantPrice: IAmount;
+    maxVariantPrice: IAmount;
+}
+
+interface IAmount {
+    amount: string;
+}
+
+const ProductCard: FC<IProductCardProps> = ({ product: { title, priceRange, images, availableForSale } }) => {
     return (
-        <StyledCard variant="outlined">
-            <CardContent>
-                <Typography variant="subtitle2">{title}</Typography>
-            </CardContent>
-            <img src={images[0].originalSrc} />
-            <CardActions>
-                <Typography variant="body2">{description}</Typography>
-            </CardActions>
-        </StyledCard>
+        <Grid item xs={4}>
+            <StyledCard variant="outlined">
+                <SoldOutFlag>
+                    <Typography component="span">Sprzedane</Typography>
+                </SoldOutFlag>
+                <img src={images[0].originalSrc} />
+                <CardContent>
+                    <Typography variant="h6">{title}</Typography>
+                    <Typography variant="body1">{priceRange.minVariantPrice.amount}zł</Typography>
+                </CardContent>
+            </StyledCard>
+        </Grid>
     );
 };
 
