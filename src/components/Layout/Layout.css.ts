@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const Page = styled.div`
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+export const CSSGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 `;
