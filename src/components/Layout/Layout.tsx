@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "../Header/Header";
-import { Page } from "./Layout.css";
+import { CSSGrid } from "./Layout.css";
 import Footer from "../Footer/Footer";
+import Page from "../Page/Page";
 
 interface ILayout {
     children?: JSX.Element[] | JSX.Element;
@@ -20,13 +21,11 @@ const Layout: FC<ILayout> = ({ children }) => {
     `);
 
     return (
-        <>
+        <CSSGrid>
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <Page>
-                <main>{children}</main>
-            </Page>
+            <Page>{children}</Page>
             <Footer />
-        </>
+        </CSSGrid>
     );
 };
 
