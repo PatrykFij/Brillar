@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Typography } from "@material-ui/core";
+import { Badge, Typography } from "@material-ui/core";
 import { HeaderWrapper, IconsContainer } from "./Header.css";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -16,7 +16,9 @@ const Header: FC<IHeader> = ({ siteTitle }) => (
         </Typography>
         <IconsContainer>
             <Link to="/basket">
-                <ShoppingCartIcon />
+                <Badge badgeContent={4} color="secondary">
+                    <ShoppingCartIcon />
+                </Badge>
             </Link>
             <Link to="/login">
                 <PersonOutlineIcon />

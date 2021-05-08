@@ -23,7 +23,7 @@ export const HeaderWrapper = styled.header`
         text-decoration: none;
     }
     ${mediaQuery.SM} {
-        padding: 0 10px;
+        padding: 4px 10px;
 
         h3 {
             font-size: 2.5rem;
@@ -38,6 +38,10 @@ export const IconsContainer = styled.div`
     svg {
         font-size: 30px;
         padding: 0 10px;
+    }
+
+    .MuiBadge-colorSecondary {
+        background-color: ${BrillarColors.COLOR_BADGE};
     }
 
     ${mediaQuery.SM} {
