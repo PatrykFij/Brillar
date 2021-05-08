@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button, CardActions, CardContent, Grid, Typography } from "@material-ui/core";
+import { Button, CardContent, Typography } from "@material-ui/core";
 import { SoldOutFlag, StyledCard, StyledCardActions } from "./ProductCard.css";
 
 interface IProductCardProps {
