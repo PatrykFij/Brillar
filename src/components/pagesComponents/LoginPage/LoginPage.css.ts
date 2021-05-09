@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { BrillarColors } from "../../constants/BrillarColors";
-import mediaQuery from "../../constants/MediaQueries";
+import { BrillarColors } from "../../../constants/BrillarColors";
+import mediaQuery from "../../../constants/MediaQueries";
 
 export const LoginPageWrapper = styled.div`
     background-color: ${BrillarColors.COLOR_GOLD};
