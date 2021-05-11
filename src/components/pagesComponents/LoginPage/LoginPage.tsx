@@ -1,6 +1,9 @@
 import { Button, TextField, Typography } from "@material-ui/core";
+import { Link } from "gatsby";
 import React, { FC } from "react";
 import { ActionsWrapper, FormWrapper, Login, LoginPageWrapper, LoginWrapper, RegisterWrapper } from "./LoginPage.css";
+
+const RegistrationLink = (props: any) => <Link to="/register" {...props} />;
 
 const LoginPage: FC = () => {
     return (
@@ -21,13 +24,11 @@ const LoginPage: FC = () => {
                     <ActionsWrapper>
                         <LoginWrapper>
                             <Typography>Nie pamiętasz hasła?</Typography>
-                            <Button variant="contained" color="primary">
-                                Zaloguj
-                            </Button>
+                            <Button variant="contained">Zaloguj</Button>
                         </LoginWrapper>
                         <RegisterWrapper>
                             <Typography>Nie masz jeszcze konta?</Typography>
-                            <Button variant="contained" color="primary">
+                            <Button component={RegistrationLink} variant="contained">
                                 Zarejestruj się
                             </Button>
                         </RegisterWrapper>
