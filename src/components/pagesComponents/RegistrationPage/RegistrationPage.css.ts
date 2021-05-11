@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BrillarColors } from "../../../constants/BrillarColors";
 import mediaQuery from "../../../constants/MediaQueries";
 
-export const LoginPageWrapper = styled.div`
+export const RegistrationPageWrapper = styled.div`
     background-color: ${BrillarColors.COLOR_GOLD};
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -14,7 +14,7 @@ export const LoginPageWrapper = styled.div`
     }
 `;
 
-export const Login = styled.div`
+export const Register = styled.div`
     background-color: ${BrillarColors.COLOR_WHITE};
     grid-column: 3 / 6;
     display: grid;
@@ -61,10 +61,6 @@ export const ActionsWrapper = styled.div`
     justify-content: flex-end;
     flex-wrap: wrap;
 
-    p {
-        font-size: 0.8rem;
-    }
-
     & > div {
         padding-bottom: 7px;
     }
@@ -80,34 +76,8 @@ export const ActionsWrapper = styled.div`
     }
 
     ${mediaQuery.SM} {
-        span {
-            font-size: 12px;
-        }
-
         .MuiButton-root {
             min-width: 150px;
         }
-
-        p {
-            font-size: 0.6rem;
-        }
     }
-`;
-
-export const LoginWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    width: min-content;
-    justify-content: flex-end;
-
-    p {
-        padding-bottom: 10px;
-    }
-`;
-
-export const RegisterWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
 `;
