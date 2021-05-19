@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import { Badge, Typography } from "@material-ui/core";
 import { HeaderWrapper, IconsContainer } from "./Header.css";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";

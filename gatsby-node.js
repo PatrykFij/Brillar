@@ -1,7 +1,7 @@
 const path = require(`path`);
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
-    // Query for all products in Shopify
+
     const result = await graphql(`
         query {
             allShopifyProduct(sort: { fields: [title] }) {
@@ -28,17 +28,15 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         }
     `);
-    // Iterate over all products and create a new page using a template
-    // The product "handle" is generated automatically by Shopify
-    console.log(result);
-    // result.data.allShopifyProduct.edges.forEach(({ node }) => {
-    //     console.log(node.handle);
-    //     createPage({
-    //         path: `/products/${node.handle}`,
-    //         component: path.resolve(`./src/templates/product.tsx`),
-    //         context: {
-    //             product: node,
-    //         },
-    //     });
-    // });
+
+    result.data.allShopifyProduct.edges.forEach(({ node }) => {
+        console.log(node.handle);
+        createPage({
+            path: `/products/${node.handle}`,
+            component: path.resolve(`./src/templates/product.tsx`),
+            context: {
+                product: node,
+            },
+        });
+    });
 };

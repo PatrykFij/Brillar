@@ -35,5 +35,6 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off",
         // allow @ts-ignore for testing purposes
         "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
     },
 };
