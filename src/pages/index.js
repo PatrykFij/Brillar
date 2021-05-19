@@ -1,23 +1,20 @@
-import React, { FC, Fragment, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import ProductCard from "../components/ProductCard/ProductCard";
 import { useStaticGetAllShopifyProductsQuery } from "../graphql/AllShopifyProducts";
 
-const IndexPage: FC = () => {
+const IndexPage = () => {
     const { allShopifyProduct } = useStaticGetAllShopifyProductsQuery();
 
     useEffect(() => {
-        allShopifyProduct.edges.map(({ node }: any) => console.log(node));
+        allShopifyProduct.edges.map(({ node }) => console.log(node));
     }, [allShopifyProduct]);
 
     return (
         <Layout>
             {allShopifyProduct &&
-                allShopifyProduct.edges.map(({ node }: any) => (
+                allShopifyProduct.edges.map(({ node }) => (
                     <Fragment key={node.handle}>
-                        <ProductCard product={node} />
-                        <ProductCard product={node} />
-                        <ProductCard product={node} />
                         <ProductCard product={node} />
                     </Fragment>
                 ))}

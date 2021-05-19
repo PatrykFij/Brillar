@@ -1,11 +1,11 @@
 import { Button, TextField, Typography } from "@material-ui/core";
 import { Link } from "gatsby";
-import React, { FC } from "react";
+import React from "react";
 import { ActionsWrapper, FormWrapper, Login, LoginPageWrapper, LoginWrapper, RegisterWrapper } from "./LoginPage.css";
 
-const RegistrationLink = (props: any) => <Link to="/register" {...props} />;
+const RegistrationLink = (props) => <Link to="/register" {...props} />;
 
-const LoginPage: FC = () => {
+const LoginPage = () => {
     return (
         <LoginPageWrapper>
             <Login>

@@ -1,8 +1,8 @@
 import { Button, TextField, Typography } from "@material-ui/core";
-import React, { FC } from "react";
+import React from "react";
 import { ActionsWrapper, FormWrapper, Register, RegistrationPageWrapper } from "./RegistrationPage.css";
 
-const RegistrationPage: FC = () => {
+const RegistrationPage = () => {
     return (
         <RegistrationPageWrapper>
             <Register>

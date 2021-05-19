@@ -24,21 +24,10 @@ module.exports = {
                 name: `brillar`,
                 short_name: `brillar`,
                 start_url: `/`,
-                background_color: `#d9caa1`,
-                theme_color: `#d9caa1`,
+                background_color: `#663399`,
+                theme_color: `#663399`,
                 display: `minimal-ui`,
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-            },
-        },
-        {
-            resolve: "gatsby-source-graphql",
-            options: {
-                // Arbitrary name for the remote schema Query type
-                typeName: "SWAPI",
-                // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-                fieldName: "cosmetics",
-                // Url to query from
-                url: process.env.GRAPH_CMS_API,
             },
         },
         {
@@ -58,9 +47,9 @@ module.exports = {
             resolve: `gatsby-source-shopify`,
             options: {
                 // The domain name of your Shopify shop.
-                shopName: `brillar-jewelry`,
+                shopName: process.env.GATSBY_SHOP_NAME,
                 // The storefront access token
-                accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+                accessToken: process.env.GATSBY_ACCESS_TOKEN,
             },
         },
         {
@@ -80,14 +69,6 @@ module.exports = {
                 exclude: ["node_modules", ".cache", "public"],
 
                 // Any eslint-webpack-plugin options below
-            },
-        },
-        {
-            resolve: `gatsby-plugin-typescript`,
-            options: {
-                isTSX: true, // defaults to false
-                jsxPragma: `jsx`, // defaults to "React"
-                allExtensions: true, // defaults to false
             },
         },
         `gatsby-plugin-gatsby-cloud`,
