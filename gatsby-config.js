@@ -31,17 +31,6 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-source-graphql",
-            options: {
-                // Arbitrary name for the remote schema Query type
-                typeName: "SWAPI",
-                // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-                fieldName: "cosmetics",
-                // Url to query from
-                url: process.env.GRAPH_CMS_API,
-            },
-        },
-        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
