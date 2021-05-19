@@ -1,28 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 import { Button, CardContent, Typography } from "@material-ui/core";
 import { SoldOutFlag, StyledCard, StyledCardActions } from "./ProductCard.css";
 
-interface IProductCardProps {
-    product: IProduct;
-}
-
-interface IProduct {
-    title: string;
-    priceRange: IPriceRange;
-    images: any;
-    availableForSale: boolean;
-}
-
-interface IPriceRange {
-    minVariantPrice: IAmount;
-    maxVariantPrice: IAmount;
-}
-
-interface IAmount {
-    amount: string;
-}
-
-const ProductCard: FC<IProductCardProps> = ({ product: { title, priceRange, images, availableForSale } }) => {
+const ProductCard = ({ product: { title, priceRange, images, availableForSale } }) => {
     return (
         <StyledCard variant="outlined">
             <SoldOutFlag>
