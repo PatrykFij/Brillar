@@ -2,19 +2,12 @@ import styled from "styled-components";
 import mediaQuery from "../../constants/MediaQueries";
 
 export const PageWrapper = styled.div`
-    grid-column: 2 / 12;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 10px;
 
     main {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
         grid-gap: 15px;
-    }
-    ${mediaQuery.LG} {
-        main {
-            grid-template-columns: repeat(4, 1fr);
-        }
+        grid-template-columns: 1fr 1fr;
     }
 
     ${mediaQuery.MD} {
@@ -26,9 +19,9 @@ export const PageWrapper = styled.div`
         }
     }
 
-    ${mediaQuery.SM} {
+    ${mediaQuery.LG} {
         main {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(6, 1fr);
         }
     }
 `;
