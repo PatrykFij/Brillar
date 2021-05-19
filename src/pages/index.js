@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import Layout from "../components/Layout/Layout";
+import { Layout } from "components";
 import ProductCard from "../components/ProductCard/ProductCard";
 import { useStaticGetAllShopifyProductsQuery } from "../graphql/AllShopifyProducts";
 
